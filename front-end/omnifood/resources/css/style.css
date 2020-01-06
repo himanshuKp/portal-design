@@ -1,3 +1,8 @@
+/* --------------------------------------------------------------------------------------
+   BASIC SETUP 
+   orange color: #FF7140
+------------------------------------------------------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -13,29 +18,33 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1;}
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --------------------------------------------------------------------------------------
+   REUSABLE COMPONENETS         
+------------------------------------------------------------------------------------------*/
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../img/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+section {
+    padding: 80px 0;
 }
 
-h1{
-    margin: 0;
-    color: white;
-    margin-bottom: 20px;
-    font-size: 240%;
-    font-weight: 300;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    word-spacing: 4px;
+.box {
+    padding: 1%;
 }
 
+/* ----------------------   BUTTONS   -------------------------------------*/
 .hero-text-box {
     position: absolute;
     width: 1140px;
@@ -51,13 +60,7 @@ h1{
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: #FF2200;
-    border: 1px solid #FF2200;
-    color: #ffffff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-full:link,
@@ -65,10 +68,247 @@ h1{
     background-color: #FF7140;
     border: 1px solid #FF7140;
     color: white;
+    margin: 0 15px 0 0;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
     border: 1px solid #FF7140;
+    color: #FF7140;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #FF2200;
+}
+
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #FF7140;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #FF7140;
+    color: #ffffff;
+}
+
+/* ----------------------   HEADING   -------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin: 20px 0 0 0;
+}
+
+.main-navigation {
+    float: right;
+    list-style: none; /*get rid of bullets*/
+    margin: 55px 0 0 0;;
+}
+
+.main-navigation li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-navigation li a:link,
+.main-navigation li a:visited {
+    padding: 8px 0;
+    color: #ffffff;
+    text-decoration: none; /*get rid of underline*/
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-navigation li a:hover,
+.main-navigation li a:active {
+    border-bottom: 2px solid #FF7140;
+}
+
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 240%;
+    margin-top: 0;
+    color: white;
+    margin-bottom: 20px;
+    word-spacing: 4px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2::after {
+    display: block;
+    height: 2px;
+    background-color: #FF7140;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------------------------------------------
+   FEATURES         
+------------------------------------------------------------------------------------------*/
+
+
+/* -------------------- PARAGRAPHS  -------------------- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+
+/* ------------- ICONS --------------- */
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #FF7140;
+    margin-bottom: 10px;
+}
+
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------------------
+   MEALS         
+------------------------------------------------------------------------------------------*/
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* --------------------------------------------------------------------------------------
+   HOW IT WORKS         
+------------------------------------------------------------------------------------------*/
+
+.section-steps {
+    background-color: #fafafa;
+}
+
+.steps-box:first-child {
+    margin: 30px 0 0 0;
+    text-align: right;
+    padding: 0 3% 0 0;
+}
+
+.steps-box:last-child {
+    padding: 0 0 0 3%;
+    margin: 70px 0 0 0;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin: 0 0 50px 0;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #FF7140;
+    border: 2px solid #FF7140;
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin: 0 10px 0 0;
+}
+
+/* --------------------------------------------------------------------------------------
+   CITIES         
+------------------------------------------------------------------------------------------*/
+
+.section-cities .citiesPhoto {
+    margin: 0 15% 5% 0;
+    height: auto;
+    width: 100%;
+}
+
+.citiesIcon {
     color: #FF7140;
 }
