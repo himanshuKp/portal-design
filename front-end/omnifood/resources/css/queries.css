@@ -1,3 +1,5 @@
+/* Developed By: Himanshu Kandpal <cse10324.sbit@gmail.com><himanshukp324@gmail.com> */
+
 /* Big tablet to 1200px (widths smaller taht the 1140px row) */
 @media only screen and (max-width: 1200px) {
     .hero-text-box {
@@ -110,8 +112,6 @@
     .works-step:last-of-type { margin-bottom: 20px; }
     
 }
-
-
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
